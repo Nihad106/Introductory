@@ -33,5 +33,9 @@ Route::group(['middleware'=> ['auth','admin']],function(){
 
 
     Route::get('/role-register', [DashboardController::class,'registered']);
+    Route::get('/role-edit/{id}', [DashboardController::class,'registeredit']);
+    Route::put('/role-register-update/{id}',[DashboardController::class,'registerupdate']);
+    Route::put('/home/{id}',[DashboardController::class,'nonAdmin']);
+    
 });
 
